@@ -14,7 +14,7 @@ FIRST_LAYOUTS = [ "latn_qwerty_us", "latn_colemak", "latn_dvorak" ]
 # File names that are known not to be layouts. Avoid warning about them.
 KNOWN_NOT_LAYOUT = set([
     "number_row", "numpad", "pin", "bottom_row", "settings", "method",
-    "greekmath", "numeric" ])
+    "greekmath", "numeric", "emoji_key_layout" ])
 
 # Read a layout from a file. Returns [None] if [fname] is not a layout.
 def read_layout(fname):
