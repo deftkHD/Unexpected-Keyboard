@@ -1,14 +1,11 @@
 package juloo.keyboard2;
 
-import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.inputmethodservice.InputMethodService;
 import android.os.Build.VERSION;
 import android.os.IBinder;
 import android.text.InputType;
-import android.util.Log;
-import android.util.LogPrinter;
 import android.view.*;
 import android.view.inputmethod.EditorInfo;
 import android.view.inputmethod.InputConnection;
@@ -20,9 +17,7 @@ import android.widget.LinearLayout;
 import java.util.AbstractMap.SimpleEntry;
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.HashSet;
 import java.util.List;
-import java.util.Set;
 
 public class Keyboard2 extends InputMethodService
   implements SharedPreferences.OnSharedPreferenceChangeListener
@@ -35,7 +30,7 @@ public class Keyboard2 extends InputMethodService
   private int _currentTextLayout;
   // Layout associated with the currently selected locale. Not 'null'.
   private KeyboardData _localeTextLayout;
-  private ViewGroup _emojiPane = null;
+  private EmojiPane _emojiPane = null;
   public int actionId; // Action performed by the Action key.
 
   private Config _config;
@@ -385,8 +380,8 @@ public class Keyboard2 extends InputMethodService
 
         case SWITCH_EMOJI:
           if (_emojiPane == null)
-            _emojiPane = (ViewGroup)inflate_view(R.layout.emoji_pane);
-          setInputView(_emojiPane);
+            _emojiPane = new EmojiPane(Keyboard2.this, _config);
+          _emojiPane.show(Keyboard2.this);
           break;
 
         case SWITCH_BACK_EMOJI:

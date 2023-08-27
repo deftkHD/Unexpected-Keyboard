@@ -2,45 +2,40 @@
 <resources>
   <declare-styleable name="keyboard">
     <!-- The background of the keyboard -->
-    <attr name="colorKeyboard" format="color"/>
+    <attr name="colorKeyboard" format="color" />
     <!-- Background of the keys -->
-    <attr name="colorKey" format="color"/>
+    <attr name="colorKey" format="color" />
     <!-- Background of the keys when pressed -->
-    <attr name="colorKeyActivated" format="color"/>
+    <attr name="colorKeyActivated" format="color" />
     <!-- Label colors -->
-    <attr name="colorLabel" format="color"/>
-    <attr name="colorLabelActivated" format="color"/>
-    <attr name="colorLabelLocked" format="color"/>
-    <attr name="secondaryLightOffset" format="float"/>
+    <attr name="colorLabel" format="color" />
+    <attr name="colorLabelActivated" format="color" />
+    <attr name="colorLabelLocked" format="color" />
+    <attr name="secondaryLightOffset" format="float" />
     <!-- Corner labels -->
-    <attr name="colorSubLabel" format="color"/>
+    <attr name="colorSubLabel" format="color" />
     <!-- Borders -->
-    <attr name="keyBorderRadius" format="dimension"/>
-    <attr name="keyBorderWidth" format="dimension"/>
-    <attr name="keyBorderWidthActivated" format="dimension"/>
-    <attr name="keyBorderColorLeft" format="color"/>
-    <attr name="keyBorderColorTop" format="color"/>
-    <attr name="keyBorderColorRight" format="color"/>
-    <attr name="keyBorderColorBottom" format="color"/>
-    <!-- Emoji panel -->
-    <attr name="emoji_button_bg" type="color" format="color"/>
-    <attr name="emoji_color" type="color" format="color"/>
-    <attr name="emoji_key_bg" type="color" format="color"/>
-    <attr name="emoji_key_text" type="color" format="color"/>
+    <attr name="keyBorderRadius" format="dimension" />
+    <attr name="keyBorderWidth" format="dimension" />
+    <attr name="keyBorderWidthActivated" format="dimension" />
+    <attr name="keyBorderColorLeft" format="color" />
+    <attr name="keyBorderColorTop" format="color" />
+    <attr name="keyBorderColorRight" format="color" />
+    <attr name="keyBorderColorBottom" format="color" />
     <!-- System integration -->
-    <attr name="navigationBarColor" format="color"/>
-    <attr name="windowLightNavigationBar" format="boolean"/>
+    <attr name="navigationBarColor" format="color" />
+    <attr name="windowLightNavigationBar" format="boolean" />
   </declare-styleable>
+
   <style name="BaseTheme">
     <item name="android:forceDarkAllowed">false</item>
     <item name="navigationBarColor">?attr/colorKeyboard</item>
-    <item name="windowLightNavigationBar">?attr/android:isLightTheme</item>
+    <item name="windowLightNavigationBar">?android:attr/isLightTheme</item>
     <item name="keyBorderRadius">5dp</item>
     <item name="keyBorderWidth">0dp</item>
     <item name="keyBorderWidthActivated">0dp</item>
-    <item name="emoji_key_bg" type="color">?attr/emoji_button_bg</item>
-    <item name="emoji_key_text" type="color">?attr/colorLabel</item>
   </style>
+
   <style name="Dark" parent="BaseTheme">
     <item name="android:isLightTheme">false</item>
     <item name="colorKeyboard">#1b1b1b</item>
@@ -54,9 +49,8 @@
     <item name="colorLabelLocked">#33cc33</item>
     <item name="colorSubLabel">#cccccc</item>
     <item name="secondaryLightOffset">-0.2</item>
-    <item name="emoji_button_bg" type="color">#202020</item>
-    <item name="emoji_color" type="color">#ffffff</item>
   </style>
+
   <style name="Light" parent="BaseTheme">
     <item name="android:isLightTheme">true</item>
     <item name="colorKeyboard">#e3e3e3</item>
@@ -73,9 +67,8 @@
     <item name="colorLabelLocked">#33cc33</item>
     <item name="colorSubLabel">#333333</item>
     <item name="secondaryLightOffset">+0.3</item>
-    <item name="emoji_button_bg">#dedede</item>
-    <item name="emoji_color">#000000</item>
   </style>
+
   <style name="Black" parent="BaseTheme">
     <item name="android:isLightTheme">false</item>
     <item name="colorKeyboard">#000000</item>
@@ -93,12 +86,12 @@
     <item name="colorSubLabel">#bbbbbb</item>
     <item name="secondaryLightOffset">-0.25</item>
     <item name="keyBorderRadius">1dp</item>
-    <item name="emoji_button_bg">#000000</item>
-    <item name="emoji_color">#ffffff</item>
   </style>
+
   <style name="AltBlack" parent="Black">
     <item name="keyBorderWidth">1dp</item>
   </style>
+
   <style name="White" parent="BaseTheme">
     <item name="android:isLightTheme">true</item>
     <item name="colorKeyboard">#ffffff</item>
@@ -115,9 +108,8 @@
     <item name="colorLabelLocked">#33cc33</item>
     <item name="colorSubLabel">#333333</item>
     <item name="secondaryLightOffset">+0.35</item>
-    <item name="emoji_button_bg">#ffffff</item>
-    <item name="emoji_color">#000000</item>
   </style>
+
   <style name="ePaper" parent="BaseTheme">
     <item name="android:isLightTheme">true</item>
     <item name="colorKeyboard">#ffffff</item>
@@ -134,7 +126,5 @@
     <item name="colorLabelLocked">#33cc33</item>
     <item name="colorSubLabel">#333333</item>
     <item name="secondaryLightOffset">+0.35</item>
-    <item name="emoji_button_bg">#ffffff</item>
-    <item name="emoji_color">#000000</item>
   </style>
 </resources>

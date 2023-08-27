@@ -1,11 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:hardwareAccelerated="false">
-  <juloo.keyboard2.EmojiGroupButtonsBar android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content"/>
-  <juloo.keyboard2.EmojiGridView android:id="@+id/emoji_grid" android:layout_width="fill_parent" android:layout_height="@dimen/emoji_grid_height" android:orientation="vertical" android:numColumns="auto_fit" android:columnWidth="45sp" android:background="?attr/colorKeyboard"/>
-  <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
-    <juloo.keyboard2.EmojiKeyButton style="@style/emojiKeyButton" key="switch_back_emoji"/>
-    <juloo.keyboard2.EmojiKeyButton style="@style/emojiKeyButton" android:layout_weight="4" key="space"/>
-    <juloo.keyboard2.EmojiKeyButton style="@style/emojiKeyButton" key="backspace"/>
-    <juloo.keyboard2.EmojiKeyButton style="@style/emojiKeyButton" key="enter"/>
-  </LinearLayout>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <androidx.emoji2.emojipicker.EmojiPickerView
+        android:id="@+id/emoji_picker"
+        android:layout_width="match_parent"
+        android:layout_height="230dp"
+        android:hardwareAccelerated="true"
+        android:layout_gravity="bottom"
+        android:theme="@style/EmojiPickerStyle"
+        app:emojiGridColumns="9"
+        tools:background="@android:color/holo_orange_dark" />
+
+    <juloo.keyboard2.Keyboard2View
+        android:id="@+id/keyboard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorKeyboard" />
+
 </LinearLayout>
